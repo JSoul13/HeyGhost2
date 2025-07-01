@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Demo - Hey Ghost</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster:wght@400&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://cdn.abacus.ai/images/8d0659b7-e98d-4656-9810-5bac660c17ce.png" alt="Hey Ghost Logo" class="logo-icon">
+                <span class="logo-text">Hey Ghost</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="demo.html" class="nav-link active">Demo</a></li>
+                <li><a href="ghost-link.html" class="nav-link">Ghost Link</a></li>
+                <li><a href="my-entity.html" class="nav-link">My Entity</a></li>
+                <li><a href="signup.html" class="nav-link signup-btn">Sign Up</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="demo-main">
+        <div class="demo-container">
+            <div class="demo-header">
+                <h1>Interactive Demo</h1>
+                <p>Experience the power of Hey Ghost's paranormal detection technology</p>
+            </div>
+
+            <div class="demo-grid">
+                <!-- EMF Detection Module -->
+                <div class="demo-module">
+                    <div class="module-header">
+                        <h3>EMF Detection System</h3>
+                        <div class="module-status">
+                            <span class="status-indicator active"></span>
+                            <span>Active</span>
+                        </div>
+                    </div>
+                    <div class="emf-display">
+                        <div class="emf-meter">
+                            <div class="emf-reading">
+                                <span class="emf-value">0</span>
+                                <span class="emf-unit">%</span>
+                            </div>
+                            <div class="emf-bar">
+                                <div class="emf-fill"></div>
+                            </div>
+                        </div>
+                        <div class="emf-visual">
+                            <img src="https://cdn.abacus.ai/images/381b203a-2997-4496-9a1b-4051014d4cf8.png" alt="EMF Field" class="emf-field">
+                        </div>
+                    </div>
+                    <div class="emf-controls">
+                        <button id="emf-start" class="btn btn-primary">Start Detection</button>
+                        <button id="emf-stop" class="btn btn-secondary" disabled>Stop</button>
+                    </div>
+                    <div class="emf-log">
+                        <h4>Recent Activity</h4>
+                        <div id="emf-log-entries"></div>
+                    </div>
+                </div>
+
+                <!-- EVP Module -->
+                <div class="demo-module">
+                    <div class="module-header">
+                        <h3>EVP Recording</h3>
+                        <div class="module-status">
+                            <span class="status-indicator"></span>
+                            <span>Ready</span>
+                        </div>
+                    </div>
+                    <div class="evp-display">
+                        <div class="evp-waveform">
+                            <canvas id="evp-canvas" width="300" height="100"></canvas>
+                        </div>
+                        <div class="evp-controls">
+                            <button id="evp-record" class="btn btn-primary">🎤 Record</button>
+                            <button id="evp-play" class="btn btn-secondary" disabled>▶️ Play</button>
+                            <button id="evp-analyze" class="btn btn-outline" disabled>🔍 Analyze</button>
+                        </div>
+                        <div class="evp-timer">
+                            <span id="evp-time">00:00</span>
+                        </div>
+                    </div>
+                    <div class="evp-results">
+                        <h4>Analysis Results</h4>
+                        <div id="evp-analysis"></div>
+                    </div>
+                </div>
+
+                <!-- Spirit Response Module -->
+                <div class="demo-module">
+                    <div class="module-header">
+                        <h3>Spirit Response System</h3>
+                        <div class="module-status">
+                            <span class="status-indicator"></span>
+                            <span>Listening</span>
+                        </div>
+                    </div>
+                    <div class="spirit-display">
+                        <div class="spirit-interface">
+                            <div class="spirit-avatar">
+                                <img src="https://cdn.abacus.ai/images/97ef0606-c4e5-4fcd-bae6-e9ba39c61412.png" alt="Spirit Avatar" class="spirit-img">
+                            </div>
+                            <div class="spirit-chat">
+                                <div id="spirit-messages"></div>
+                            </div>
+                        </div>
+                        <div class="spirit-controls">
+                            <input type="text" id="spirit-input" placeholder="Ask a question..." class="spirit-input">
+                            <button id="spirit-send" class="btn btn-primary">Send</button>
+                        </div>
+                    </div>
+                    <div class="spirit-suggestions">
+                        <h4>Suggested Questions</h4>
+                        <div class="suggestion-buttons">
+                            <button class="suggestion-btn">Are you here?</button>
+                            <button class="suggestion-btn">What is your name?</button>
+                            <button class="suggestion-btn">How did you pass?</button>
+                            <button class="suggestion-btn">Do you have a message?</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session Log Module -->
+                <div class="demo-module">
+                    <div class="module-header">
+                        <h3>Session Logging</h3>
+                        <div class="module-status">
+                            <span class="status-indicator active"></span>
+                            <span>Recording</span>
+                        </div>
+                    </div>
+                    <div class="session-display">
+                        <div class="session-info">
+                            <div class="session-time">
+                                <span>Session Duration: </span>
+                                <span id="session-timer">00:00:00</span>
+                            </div>
+                            <div class="session-events">
+                                <span>Events Logged: </span>
+                                <span id="event-count">0</span>
+                            </div>
+                        </div>
+                        <div class="session-log">
+                            <div id="session-entries"></div>
+                        </div>
+                    </div>
+                    <div class="session-controls">
+                        <button id="export-data" class="btn btn-outline">📊 Export Data</button>
+                        <button id="clear-log" class="btn btn-secondary">🗑️ Clear Log</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-footer">
+                <div class="demo-cta">
+                    <h3>Ready for the Full Experience?</h3>
+                    <p>This demo showcases just a fraction of Hey Ghost's capabilities. Sign up to unlock premium features!</p>
+                    <a href="signup.html" class="btn btn-primary">Get Full Access</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Hey Ghost Suite</h4>
+                    <ul>
+                        <li><a href="index.html">Hey Ghost</a></li>
+                        <li><a href="ghost-link.html">Ghost Link</a></li>
+                        <li><a href="my-entity.html">My Entity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hey Ghost. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/demo.js"></script>
+</body>
+</html>
