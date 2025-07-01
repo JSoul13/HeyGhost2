@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Hey Ghost</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Creepster:wght@400&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="https://cdn.abacus.ai/images/8d0659b7-e98d-4656-9810-5bac660c17ce.png" alt="Hey Ghost Logo" class="logo-icon">
+                <span class="logo-text">Hey Ghost</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="demo.html" class="nav-link">Demo</a></li>
+                <li><a href="ghost-link.html" class="nav-link">Ghost Link</a></li>
+                <li><a href="my-entity.html" class="nav-link">My Entity</a></li>
+                <li><a href="signup.html" class="nav-link signup-btn active">Sign Up</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="signup-main">
+        <div class="signup-container">
+            <div class="signup-header">
+                <div class="signup-mascot">
+                    <img src="https://cdn.abacus.ai/images/97ef0606-c4e5-4fcd-bae6-e9ba39c61412.png" alt="Ghost Mascot" class="mascot-img pulse-animation">
+                </div>
+                <h1>Join the Beyond</h1>
+                <p>Create your account to start communicating with the paranormal</p>
+            </div>
+
+            <div class="signup-content">
+                <div class="signup-form-container">
+                    <form id="signup-form" class="signup-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                            <span class="error-message" id="fullName-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <span class="error-message" id="phone-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                            <span class="error-message" id="address-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="screenName">Screen Name</label>
+                            <input type="text" id="screenName" name="screenName" required>
+                            <small class="form-help">This will be your display name in the community</small>
+                            <span class="error-message" id="screenName-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required>
+                            <span class="error-message" id="password-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <span class="error-message" id="confirmPassword-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a>
+                            </label>
+                            <span class="error-message" id="terms-error"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to paranormal updates and ghost hunting tips
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Create Account</button>
+                    </form>
+                </div>
+
+                <div class="signup-benefits">
+                    <h3>What You Get</h3>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✨</div>
+                            <div class="benefit-text">
+                                <h4>Free Access</h4>
+                                <p>Start with our free tier - no credit card required</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🔮</div>
+                            <div class="benefit-text">
+                                <h4>EMF Detection</h4>
+                                <p>Real-time paranormal activity monitoring</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🎵</div>
+                            <div class="benefit-text">
+                                <h4>EVP Recording</h4>
+                                <p>Capture and analyze electronic voice phenomena</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">👻</div>
+                            <div class="benefit-text">
+                                <h4>Spirit Communication</h4>
+                                <p>Interactive responses from the beyond</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">📱</div>
+                            <div class="benefit-text">
+                                <h4>Mobile App</h4>
+                                <p>Take your investigations anywhere</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🌍</div>
+                            <div class="benefit-text">
+                                <h4>Global Community</h4>
+                                <p>Connect with paranormal investigators worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="signup-footer">
+                <p>Already have an account? <a href="#" class="link">Sign In</a></p>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div id="success-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img src="https://cdn.abacus.ai/images/97ef0606-c4e5-4fcd-bae6-e9ba39c61412.png" alt="Success" class="modal-icon">
+                    <h2>Welcome to the Beyond!</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Your account has been created successfully. You can now start exploring the paranormal world with Hey Ghost.</p>
+                    <div class="modal-buttons">
+                        <a href="demo.html" class="btn btn-primary">Try Demo</a>
+                        <a href="index.html" class="btn btn-secondary">Go Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Hey Ghost Suite</h4>
+                    <ul>
+                        <li><a href="index.html">Hey Ghost</a></li>
+                        <li><a href="ghost-link.html">Ghost Link</a></li>
+                        <li><a href="my-entity.html">My Entity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Hey Ghost. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
